@@ -10,6 +10,8 @@
 
 .menu-title {
   background-color: rgb(163, 162, 162);
+  /* position: relative;
+  z-index: 3; */
 }
 
 .dropdown-menu {
@@ -17,7 +19,6 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
   display: none;
 }
 
@@ -27,6 +28,54 @@ ul.dropdown-menu li:hover {
 
 .visible {
   display: block;
+  animation: bounce 500ms ease-in-out;
+  transform-origin: top;
 }
 
+@keyframes bounce {
+  0%{
+    transform: scaleY(0);
+  }
 
+  70%{
+    transform: scaleY(1.3);
+  }
+
+  100%{
+    transform: scaleY(1);
+  }
+}
+
+/* li{
+animation: libounce 1s ease-in-out;
+} */
+
+/* @keyframes bounce {
+ 0% {
+  height: 0;
+}
+
+ 70%{
+  height: 300px;
+ }
+
+ 100%{
+  height: 250px;
+ }
+}
+
+@keyframes libounce{
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  
+   70%{
+    transform: translateY(50%);
+    opacity: .5;
+   }
+  
+   100%{
+    transform: translateY(0);
+   }  */
+}
